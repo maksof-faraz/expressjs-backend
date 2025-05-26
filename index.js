@@ -8,7 +8,7 @@ const router = require('./router/auth.router');
 const connectDb = require('./utils/db')
 
 
-const port = 3000;
+const port = process.env.PORT;
 
 var corsOptions = {
   origin: "http://localhost:5173",
