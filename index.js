@@ -10,11 +10,11 @@ const connectDb = require('./utils/db')
 
 const port = process.env.PORT;
 
-var corsOptions = {
-  origin: "https://frontend-react-three-eta.vercel.app",
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true
-}
+  var corsOptions = {
+    origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true
+  }
 
 app.use(cors(corsOptions))
 
