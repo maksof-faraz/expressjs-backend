@@ -10,14 +10,13 @@ const connectDb = require('./utils/db')
 
 const port = process.env.PORT;
 
-app.use(cors());
-app.options('*', cors());
-app.use(function(req, res, next) { //allow cross origin requests
-    res.setHeader("Access-Control-Allow-Methods", "POST, PUT, OPTIONS, DELETE, GET");
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
+  var corsOptions = {
+    origin: "http://localhost:5173",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true
+  }
+
+app.use(cors(corsOptions))
 
 app.use(express.json());
 app.use('/api/auth', router)

@@ -15,10 +15,6 @@ pids/
 *.seed
 *.pid.lock
 
-# Environment variables
-.env
-.env.local
-.env.*.local
 
 # Coverage directory from testing tools like Istanbul
 coverage/
